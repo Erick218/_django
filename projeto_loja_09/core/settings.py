@@ -120,8 +120,19 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    BASE_DIR / 'static', # Usando o operador de divisão (/) para unir caminhos
+]
+
+# O diretório onde os arquivos estáticos serão coletados para produção (aula 10)
+STATIC_ROOT = BASE_DIR / 'staticfiles' # Mais uma vez, usando o operador /
+
+# Configurações de Mídia (também serão atualizadas para pathlib) (aula 10)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+

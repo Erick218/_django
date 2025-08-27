@@ -1,3 +1,4 @@
+{% load static %} 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,6 +16,8 @@
         crossorigin="anonymous">
     {% endblock %}
     <!-- Bloco extra_css -->
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 
 </head>
@@ -37,6 +40,7 @@
     <!-- Partial - _footer.html -->
     {% include 'site_loja/partials/_footer.html' %}
     
+    <script src="{% static 'js/script.js' %}"></script>
 
     <!-- Bloco - extra_js -->
     {% block extra_js %}
