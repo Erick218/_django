@@ -1,0 +1,68 @@
+Tabela: USER
+
+Tabela:Perfil
+
+    #USER (usuario)
+    foto
+    email
+    cpf
+    tel_fixo
+    tel_celular
+    dt_nascimento
+    genero
+    desafio_pergunta
+    desafio_resposta
+
+Tabela:Localizaçao
+    CEP
+    cidade
+    estado
+    lote
+    complemento(Opcional)
+
+Aplicaçao: estoque
+Tabela: tag
+    descricao
+
+Tabela: categoria
+    descricao
+
+Tabela:marca
+    nome
+    descricao
+
+Tabela:produto
+    nome
+    #tag
+    #categoria_produto
+    descricao
+    #marca
+    Modelo
+    preço
+    imagem
+    qt_estoque
+    tamanho
+
+-----------------------------------
+
+Aplicaçao:Noticias
+
+Tabela:tag
+    descricao
+
+Tabela: categoria_noticia
+    descricao
+
+Tabela:comentario
+    #USER
+    #Noticias
+    conteudo
+    status
+
+Tabela:Noticias:
+    titulo
+    resumo
+    conteudo
+    status
+    #tag
+    #categoria_noticia
