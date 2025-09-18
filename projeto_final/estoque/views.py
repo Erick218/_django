@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+class ProdutoListView(ProdutoListView):
+    model = Produto
+    template_name = 'estoque/produto_list.html'
+    context_object_name = 'produtos'
+    ordering = ['nome']
